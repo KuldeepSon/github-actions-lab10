@@ -12,8 +12,7 @@ jobs:
       - uses: actions/checkout@v4.1.1
 
       - run: |
-          issue_title="${{ env.ISSUE_TITLE }}"
-          if [[ "$issue_title" == *"bug"* ]]; then
+          if [[ "$ISSUE_TITLE" == *"bug"* ]]; then
             echo "Issue is about a bug!"
           else
             echo "Issue is not about a bug"
