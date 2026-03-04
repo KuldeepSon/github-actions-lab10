@@ -7,7 +7,7 @@ jobs:
   issues-job:
     runs-on: ubuntu-latest
     env:
-      "ISSUE_TITLE" = "${{ github.event.issue.title }}"
+      ISSUE_TITLE : "${{ github.event.issue.title }}"
     steps:
       - uses: actions/checkout@v4.1.1
 
