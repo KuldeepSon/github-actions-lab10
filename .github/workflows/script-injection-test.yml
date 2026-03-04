@@ -7,12 +7,12 @@ jobs:
   issues-job:
     runs-on: ubuntu-latest
     env:
-      ISSUE_TITLE : "${{ github.event.issue.title }}"
+      issue_title : "${{ github.event.issue.title }}"
     steps:
       - uses: actions/checkout@v4.1.1
 
       - run: |
-          if [[ "$ISSUE_TITLE" == *"bug"* ]]; then
+          if [[ "$issue_title" == *"bug"* ]]; then
             echo "Issue is about a bug!"
           else
             echo "Issue is not about a bug"
